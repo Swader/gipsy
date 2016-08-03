@@ -1,0 +1,17 @@
+{
+    "name": "gipsy",
+    "description": "A web UI for https:\/\/github.com\/appscape\/gips",
+    "main": "",
+    "moduleType": [],
+    "authors": [
+        "Bruno Skvorc"
+    ],
+    "license": "MIT",
+    "homepage": "",
+    "private": true,
+    "dependencies": {
+        "jquery": "*",
+        "semantic": "*",
+        "sweetalert": "*"
+    }
+}

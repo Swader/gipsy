@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gipsy</title>
+    <link rel="stylesheet" href="/assets/bower/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="/assets/bower/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+<body>
+
+<div class="ui fixed menu">
+    <div class="logocontainer ui container">
+        <a href="http://bitfalls.com" class="header item">
+            <img class="logo" src="assets/images/bitfalls.png" width="35">
+            Bitfalls.com
+        </a>
+    </div>
+</div>
+
+<div class="ui form">
+    <div class="field">
+        <label>Input</label>
+        <textarea id="input" title="input gpx"></textarea>
+    </div>
+
+    <div class="two fields">
+        <div class="field speed inline">
+            <label>Speed</label>
+            <input type="text" placeholder="5 km/h" id="speed">
+            </div>
+        <div class="field reverse">
+            <div class="ui checkbox">
+                <input type="checkbox" name="gift" id="reverse" tabindex="0" class="hidden">
+                <label>Reverse (good for routes that aren't circular)</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="field">
+        <label>Output</label>
+        <textarea id="output" title="output"></textarea>
+    </div>
+    <a href="#" id="convert-btn" class="ui button teal large fluid">Convert</a>
+</div>
+
+<div class="ui message">
+    <div class="ui accordion">
+        <div class="title">
+            <i class="dropdown icon"></i>
+            Why does this exist?
+        </div>
+        <div class="content">
+            <p>The XCode iOS simulator ignores timestamps in typical GPX files, so it's hard to use it to simulate movement when developing GPS-sensitive apps. Gipsy uses
+                <a href="https://github.com/appscape/gips">appscape/gips</a> behind the scenes to insert an arbitrary number of points between the key points already defined, which makes the simulator walk through them.
+            </p>
+            <p>This allows you to develop apps that rely on GPS movement for iOS, or to cheat in Pokemon Go.</p>
+        </div>
+        <div class="title">
+            <i class="dropdown icon"></i>
+            How do I use it?
+        </div>
+        <div class="content">
+            <p>You paste GPX content into the "Input" field. You can generate it with any routing / fitness / hiking app. You can also go to Google Maps, plan a route, grab the URL, and convert it to GPX using
+                <a href="http://www.gpsvisualizer.com/convert_input">this tool</a>. Then, set the speed, select whether or not you want the route reversed, too, and press the "Convert" button, and you'll be given the output you need. You can then paste this output into a GPX file, and load it into the XCode iOS simulator (the Debug menu, Simulate Location).
+            </p>
+        </div>
+        <div class="title">
+            <i class="dropdown icon"></i>
+            How can I help?
+        </div>
+        <div class="content">
+            <p>You can show me some cryptocurrency love:</p>
+            <ul class="ui list">
+                <li>Bitcoin: 3Cx9MjTjMXshgYLKvNPEoXcBo3tkx5aDLc</li>
+                <li>ETH / ETC: 0x0b48f7d47ddf16c6a16e8a848b1fffe065b0ff8e</li>
+                <li>XLM: GA5XIGA5C7QTPTWXQHY6MCJRMTRZDOSHR6EFIBNDQTCQHG262N4GGKTM / 719898374</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="/assets/bower/jquery/dist/jquery.min.js"></script>
+<script src="/assets/bower/semantic/dist/semantic.min.js"></script>
+<script src="/assets/bower/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+</html>
